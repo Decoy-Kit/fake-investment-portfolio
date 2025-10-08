@@ -1,0 +1,1066 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #64748b;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --background-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+.app-header {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.broker-name-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-content h1 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#broker-name-text {
+    min-width: 200px;
+}
+
+#edit-broker-name {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+#edit-broker-name:hover {
+    opacity: 1;
+}
+
+.header-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#currency-selector {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+#currency-selector:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.nav-item {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: var(--background-color);
+}
+
+.nav-item.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Views */
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+/* Portfolio Summary */
+.portfolio-summary {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.total-value h2 {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.value-display {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.change-display {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+.change-display.negative {
+    color: var(--danger-color);
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Holdings */
+.holdings-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.holding-item {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.holding-info {
+    flex: 1;
+}
+
+.holding-symbol {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.holding-name {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.holding-quantity {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.holding-values {
+    text-align: right;
+}
+
+.holding-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.holding-change {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--success-color);
+}
+
+.holding-change.negative {
+    color: var(--danger-color);
+}
+
+.holding-actions {
+    margin-left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Transactions */
+.transactions-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.transaction-item {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.transaction-type {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.transaction-type.buy {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.transaction-type.sell {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
+}
+
+.transaction-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-asset {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.transaction-date {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.transaction-quantity {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.transaction-value {
+    font-weight: 600;
+    text-align: right;
+}
+
+.transaction-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Analytics */
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart-container,
+.stats-container {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+
+.chart-container h3,
+.stats-container h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #475569;
+}
+
+.btn-success {
+    background: var(--success-color);
+    color: white;
+}
+
+.btn-success:hover {
+    background: #059669;
+}
+
+.btn-danger {
+    background: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+.btn-warning {
+    background: var(--warning-color);
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #d97706;
+}
+
+.btn-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.close-modal:hover {
+    color: var(--text-primary);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1rem;
+    padding: 0 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Price Input Container */
+.price-input-container {
+    position: relative;
+}
+
+/* Symbol Input Container */
+.symbol-input-container {
+    position: relative;
+}
+
+/* Symbol NASDAQ Container */
+.symbol-nasdaq-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.symbol-nasdaq-container input {
+    flex: 1;
+}
+
+.symbol-nasdaq-container .btn {
+    white-space: nowrap;
+}
+
+/* Asset Selection Container */
+.asset-selection-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.asset-selection-container select {
+    flex: 1;
+}
+
+.asset-selection-container .btn {
+    white-space: nowrap;
+}
+
+/* Ticker Suggestions */
+.ticker-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--shadow);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.ticker-suggestions.hidden {
+    display: none;
+}
+
+.ticker-suggestion {
+    padding: 0.75rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticker-suggestion:last-child {
+    border-bottom: none;
+}
+
+.ticker-suggestion:hover,
+.ticker-suggestion.selected {
+    background-color: #f1f5f9;
+}
+
+.ticker-suggestion-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ticker-suggestion-symbol {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.ticker-suggestion-name {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    margin-top: 0.125rem;
+}
+
+.ticker-suggestion-source {
+    font-size: 0.625rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    background: var(--background-color);
+    padding: 0.125rem 0.25rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.price-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.price-status.hidden {
+    display: none;
+}
+
+.price-status.loading {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+}
+
+.price-status.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.price-status.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    color: inherit;
+    transition: background-color 0.2s;
+}
+
+.btn-icon:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon i {
+    font-size: 0.875rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Warning Message Styles */
+.warning-message {
+    background: #fef3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #8b6914;
+}
+
+.warning-message i {
+    color: var(--warning-color);
+    margin-right: 0.5rem;
+}
+
+.warning-message ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.warning-message li {
+    margin: 0.25rem 0;
+}
+
+/* Additional Reset Options */
+.additional-reset-options {
+    margin: 1rem 0;
+}
+
+/* Checkbox Container */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: auto;
+    cursor: pointer;
+}
+
+/* Screenshot Controls */
+.screenshot-controls {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+}
+
+/* Screenshot Mode */
+body.screenshot-mode .edit-only {
+    display: none !important;
+}
+
+body.screenshot-mode .holding-actions a,
+body.screenshot-mode .holding-actions button:not(.edit-only) {
+    display: none !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #app {
+        padding: 0.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .holding-item,
+    .transaction-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .holding-values,
+    .transaction-value {
+        text-align: left;
+    }
+
+    .value-display {
+        font-size: 2rem;
+    }
+
+    .screenshot-controls {
+        bottom: 1rem;
+        right: 1rem;
+        flex-direction: column;
+    }
+}
+
+/* Theme: Mobile App */
+body.theme-mobile {
+    --background-color: #000000;
+    --surface-color: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #333333;
+}
+
+body.theme-mobile .app-header {
+    background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+    color: white;
+}
+
+body.theme-mobile .app-header h1 {
+    color: white;
+}
+
+/* Theme: Broker */
+body.theme-broker {
+    --primary-color: #16a34a;
+    --background-color: #f0f9f0;
+    --surface-color: #ffffff;
+}
+
+/* Theme: TradePro */
+body.theme-tradepro {
+    --primary-color: #dc2626;
+    --background-color: #0f172a;
+    --surface-color: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+}
+
+body.theme-tradepro .app-header {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: white;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+body.theme-tradepro .app-header h1 {
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-weight: 900;
+}
+
+body.theme-tradepro .btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Theme: WealthMax */
+body.theme-wealthmax {
+    --primary-color: #d97706;
+    --background-color: #fefce8;
+    --surface-color: #ffffff;
+    --text-primary: #451a03;
+    --text-secondary: #92400e;
+    --border-color: #fde68a;
+    --success-color: #16a34a;
+    --danger-color: #dc2626;
+    --warning-color: #d97706;
+}
+
+body.theme-wealthmax .app-header {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    box-shadow: 0 4px 20px rgba(217, 119, 6, 0.3);
+}
+
+body.theme-wealthmax .app-header h1 {
+    color: white;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+body.theme-wealthmax .nav-item.active {
+    background: linear-gradient(135deg, var(--primary-color), #f59e0b);
+}
+
+/* Theme: MarketEdge */
+body.theme-marketedge {
+    --primary-color: #7c3aed;
+    --background-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+}
+
+body.theme-marketedge .app-header {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    border-radius: 12px;
+}
+
+body.theme-marketedge .app-header h1 {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+body.theme-marketedge .portfolio-summary,
+body.theme-marketedge .holdings-section,
+body.theme-marketedge .main-nav {
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Theme: InvestCorp */
+body.theme-investcorp {
+    --primary-color: #1e40af;
+    --background-color: #f1f5f9;
+    --surface-color: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-color: #cbd5e1;
+    --success-color: #059669;
+    --danger-color: #dc2626;
+    --warning-color: #d97706;
+}
+
+body.theme-investcorp .app-header {
+    background: linear-gradient(135deg, #1e40af, #1d4ed8);
+    color: white;
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15);
+}
+
+body.theme-investcorp .app-header h1 {
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+body.theme-investcorp .btn {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+}
+
+body.theme-investcorp .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Theme: FinanceHub */
+body.theme-financehub {
+    --primary-color: #374151;
+    --background-color: #f9fafb;
+    --surface-color: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+}
+
+body.theme-financehub .app-header {
+    background: linear-gradient(135deg, #4b5563, #374151);
+    color: white;
+    border: none;
+}
+
+body.theme-financehub .app-header h1 {
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+body.theme-financehub .portfolio-summary {
+    background: linear-gradient(135deg, #f9fafb, #ffffff);
+    border: 1px solid #e5e7eb;
+}
+
+/* Empty States */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--border-color);
+}
+
+.empty-state h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+/* Utility Classes */
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-danger {
+    color: var(--danger-color) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Notifications */
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background: var(--surface-color);
+    border-left: 4px solid var(--primary-color);
+    max-width: 400px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-success {
+    border-left-color: var(--success-color);
+    color: var(--success-color);
+}
+
+.notification-error {
+    border-left-color: var(--danger-color);
+    color: var(--danger-color);
+}
+
+.notification-warning {
+    border-left-color: var(--warning-color);
+    color: var(--warning-color);
+}
+
+.notification-info {
+    border-left-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.notification span {
+    flex: 1;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-close:hover {
+    color: var(--text-primary);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

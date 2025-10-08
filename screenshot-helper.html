@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Helper</title>
+    <style>
+        body {
+            font: 14px system-ui, -apple-system, sans-serif;
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+        h3 {
+            margin: 0 0 1rem 0;
+            color: #2c3e50;
+        }
+        p {
+            margin: 0.5rem 0;
+            line-height: 1.4;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 1rem 0;
+        }
+        button:hover {
+            background: #218838;
+        }
+        button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        #status {
+            margin-top: 15px;
+            font-style: italic;
+            min-height: 20px;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>Portfolio Screenshot</h3>
+    <p>Click the button below to start capturing your portfolio.</p>
+    <div class="instructions">
+        <strong>When the browser asks:</strong><br>
+        Select the "Portfolio" tab (not this helper window)
+    </div>
+    <button id="captureBtn">📸 Start Screen Capture</button>
+    <div id="status"></div>
+    
+    <script>
+    document.getElementById('captureBtn').addEventListener('click', async () => {
+        const btn = document.getElementById('captureBtn');
+        const status = document.getElementById('status');
+        
+        try {
+            // Check if Screen Capture API is available with detailed diagnostics
+            let errorMessage = '';
+            
+            if (!window.isSecureContext) {
+                errorMessage = 'Screen capture requires HTTPS or localhost. Current page is not secure.';
+            } else if (!navigator.mediaDevices) {
+                errorMessage = 'MediaDevices API not available. Please use a modern browser (Chrome 72+, Firefox 66+, Edge 79+).';
+            } else if (!navigator.mediaDevices.getDisplayMedia) {
+                errorMessage = 'Screen Capture API not available. Please use Chrome 72+, Firefox 66+, or Edge 79+.';
+            }
+            
+            if (errorMessage) {
+                throw new Error(errorMessage);
+            }
+            
+            btn.disabled = true;
+            btn.textContent = 'Starting capture...';
+            status.textContent = 'Select the portfolio tab when prompted';
+            status.style.color = '#007bff';
+            
+            const constraints = {
+                video: {
+                    displaySurface: 'browser', // prefer a tab
+                    frameRate: 1
+                },
+                audio: false,
+                // Chromium hint: hide THIS helper window from the picker
+                selfBrowserSurface: 'exclude'
+            };
+
+            const stream = await navigator.mediaDevices.getDisplayMedia(constraints);
+            const [track] = stream.getVideoTracks();
+            
+            status.textContent = 'Processing screenshot...';
+            
+            let bitmap;
+            if ('ImageCapture' in window) {
+                const ic = new ImageCapture(track);
+                bitmap = await ic.grabFrame();
+            } else {
+                const v = document.createElement('video');
+                v.playsInline = true; v.muted = true; v.srcObject = stream;
+                await v.play();
+                await new Promise(r => v.onplaying = r);
+                bitmap = await createImageBitmap(v);
+            }
+
+            const canvas = document.createElement('canvas');
+            canvas.width = bitmap.width; canvas.height = bitmap.height;
+            canvas.getContext('2d').drawImage(bitmap, 0, 0);
+
+            const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
+            
+            // Download the screenshot
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'portfolio-screenshot.png';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+
+            // Try to copy to clipboard if supported
+            if (navigator.clipboard && window.ClipboardItem) {
+                try {
+                    await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+                    status.textContent = 'Screenshot saved and copied to clipboard!';
+                    status.style.color = '#28a745';
+                } catch {
+                    status.textContent = 'Screenshot saved successfully!';
+                    status.style.color = '#28a745';
+                }
+            } else {
+                status.textContent = 'Screenshot saved successfully!';
+                status.style.color = '#28a745';
+            }
+
+            // Notify parent window of success
+            if (window.opener) {
+                window.opener.postMessage({type:'SUCCESS', message: 'Screenshot captured successfully!'}, '*');
+            }
+            
+            // Stop all tracks and close window after a brief delay
+            stream.getTracks().forEach(t => t.stop());
+            setTimeout(() => window.close(), 1500);
+            
+        } catch (e) {
+            btn.disabled = false;
+            btn.textContent = '📸 Start Screen Capture';
+            status.textContent = 'Capture cancelled or failed: ' + e.message;
+            status.style.color = '#dc3545';
+            
+            // Notify parent window of error
+            if (window.opener) {
+                window.opener.postMessage({type:'ERROR', message: String(e)}, '*');
+            }
+            
+            // Always close the helper window after a brief delay, even on error
+            setTimeout(() => window.close(), 2000);
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1125 @@
+{
+  "lastUpdated": "2024-10-04T21:22:00.000Z",
+  "updateSource": "Manual Test Data",
+  "totalSymbols": 10,
+  "prices": {
+    "BRK-B": {
+      "price": 456.78,
+      "source": "Stooq",
+      "timestamp": "2024-10-04T21:22:00.000Z",
+      "symbol": "BRK-B"
+    },
+    "JPM": {
+      "price": 198.34,
+      "source": "Stooq",
+      "timestamp": "2024-10-04T21:22:00.000Z",
+      "symbol": "JPM"
+    },
+    "JNJ": {
+      "price": 161.23,
+      "source": "Stooq",
+      "timestamp": "2024-10-04T21:22:00.000Z",
+      "symbol": "JNJ"
+    },
+    "AACB": {
+      "price": 10.15,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AACB"
+    },
+    "AACBR": {
+      "price": 0.24,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AACBR"
+    },
+    "AACBU": {
+      "price": 10.32,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AACBU"
+    },
+    "AACG": {
+      "price": 1.39,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AACG"
+    },
+    "AACI": {
+      "price": 10.47,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AACI"
+    },
+    "AACIU": {
+      "price": 10.55,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AACIU"
+    },
+    "AACIW": {
+      "price": 0.9499,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AACIW"
+    },
+    "AAL": {
+      "price": 11.58,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AAL"
+    },
+    "AAME": {
+      "price": 2.775,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AAME"
+    },
+    "AAOI": {
+      "price": 27.93,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AAOI"
+    },
+    "AAON": {
+      "price": 98.32,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AAON"
+    },
+    "AAPG": {
+      "price": 39.38,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AAPG"
+    },
+    "AARD": {
+      "price": 16.08,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AARD"
+    },
+    "ABAT": {
+      "price": 4.88,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABAT"
+    },
+    "ABCL": {
+      "price": 5.9,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABCL"
+    },
+    "ABEO": {
+      "price": 5.41,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABEO"
+    },
+    "ABL": {
+      "price": 6.12,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABL"
+    },
+    "ABLLL": {
+      "price": 25.05,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABLLL"
+    },
+    "ABLV": {
+      "price": 0.9625,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABLV"
+    },
+    "ABLVW": {
+      "price": 0.0226,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABLVW"
+    },
+    "ABNB": {
+      "price": 120.22,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABNB"
+    },
+    "ABOS": {
+      "price": 1.73,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABOS"
+    },
+    "ABP": {
+      "price": 0.2102,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABP"
+    },
+    "ABPWW": {
+      "price": 0.0297,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABPWW"
+    },
+    "ABSI": {
+      "price": 3.38,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABSI"
+    },
+    "ABTC": {
+      "price": 6.98,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABTC"
+    },
+    "ABTS": {
+      "price": 10.1448,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABTS"
+    },
+    "ABUS": {
+      "price": 4.38,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABUS"
+    },
+    "ABVC": {
+      "price": 3.0,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABVC"
+    },
+    "ABVE": {
+      "price": 2.93,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABVE"
+    },
+    "ABVEW": {
+      "price": 0.38,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABVEW"
+    },
+    "ABVX": {
+      "price": 83.92,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ABVX"
+    },
+    "ACAD": {
+      "price": 21.8,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACAD"
+    },
+    "ACB": {
+      "price": 5.65,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACB"
+    },
+    "ACDC": {
+      "price": 4.17,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACDC"
+    },
+    "ACET": {
+      "price": 0.8345,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACET"
+    },
+    "ACFN": {
+      "price": 29.28,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACFN"
+    },
+    "ACGL": {
+      "price": 90.79,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACGL"
+    },
+
+    "ACGLN": {
+      "price": 18.0,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACGLN"
+    },
+    "ACGLO": {
+      "price": 21.96,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACGLO"
+    },
+    "ACHC": {
+      "price": 27.14,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACHC"
+    },
+    "ACHV": {
+      "price": 3.15,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACHV"
+    },
+    "ACIC": {
+      "price": 11.66,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACIC"
+    },
+    "ACIU": {
+      "price": 3.99,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACIU"
+    },
+    "ACIW": {
+      "price": 53.62,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACIW"
+    },
+    "ACLS": {
+      "price": 88.71,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACLS"
+    },
+    "ACLX": {
+      "price": 85.07,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACLX"
+    },
+    "ACMR": {
+      "price": 41.56,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACMR"
+    },
+    "ACNB": {
+      "price": 43.75,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACNB"
+    },
+    "ACNT": {
+      "price": 12.6,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACNT"
+    },
+    "ACOG": {
+      "price": 7.48,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACOG"
+    },
+    "ACON": {
+      "price": 7.35,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACON"
+    },
+    "ACONW": {
+      "price": 0.0273,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACONW"
+    },
+    "ACRS": {
+      "price": 1.86,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACRS"
+    },
+    "ACRV": {
+      "price": 1.91,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACRV"
+    },
+    "ACT": {
+      "price": 36.78,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACT"
+    },
+    "ACTG": {
+      "price": 3.29,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACTG"
+    },
+    "ACTU": {
+      "price": 6.98,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACTU"
+    },
+    "ACXP": {
+      "price": 4.55,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ACXP"
+    },
+    "ADAG": {
+      "price": 1.98,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAG"
+    },
+    "ADAM": {
+      "price": 6.98,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAM"
+    },
+    "ADAMG": {
+      "price": 24.91,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAMG"
+    },
+    "ADAMH": {
+      "price": 25.04,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAMH"
+    },
+    "ADAMI": {
+      "price": 24.99,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAMI"
+    },
+    "ADAML": {
+      "price": 22.155,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAML"
+    },
+    "ADAMM": {
+      "price": 24.81,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAMM"
+    },
+    "ADAMN": {
+      "price": 21.89,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAMN"
+    },
+    "ADAMZ": {
+      "price": 19.93,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAMZ"
+    },
+    "ADAP": {
+      "price": 0.1535,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADAP"
+    },
+    "ADBE": {
+      "price": 346.74,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADBE"
+    },
+    "ADEA": {
+      "price": 17.29,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADEA"
+    },
+    "ADGM": {
+      "price": 2.0,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADGM"
+    },
+    "ADIL": {
+      "price": 0.3984,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADIL"
+    },
+    "ADMA": {
+      "price": 14.66,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADMA"
+    },
+    "ADN": {
+      "price": 3.41,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADN"
+    },
+    "ADNWW": {
+      "price": 0.0118,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADNWW"
+    },
+    "ADP": {
+      "price": 291.31,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADP"
+    },
+    "ADPT": {
+      "price": 14.38,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADPT"
+    },
+    "ADSE": {
+      "price": 11.48,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADSE"
+    },
+    "ADSEW": {
+      "price": 1.09,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADSEW"
+    },
+    "ADSK": {
+      "price": 318.9,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADSK"
+    },
+    "ADTN": {
+      "price": 9.25,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADTN"
+    },
+    "ADTX": {
+      "price": 0.7291,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADTX"
+    },
+    "ADUR": {
+      "price": 15.09,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADUR"
+    },
+    "ADUS": {
+      "price": 114.86,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADUS"
+    },
+    "ADV": {
+      "price": 1.49,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADV"
+    },
+    "ADVB": {
+      "price": 0.466,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADVB"
+    },
+    "ADVM": {
+      "price": 5.39,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADVM"
+    },
+    "ADVWW": {
+      "price": 0.0095,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADVWW"
+    },
+    "ADXN": {
+      "price": 9.2,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "ADXN"
+    },
+    "AEBI": {
+      "price": 12.4,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AEBI"
+    },
+    "AEC": {
+      "price": 9.62,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AEC"
+    },
+    "AEHL": {
+      "price": 3.35,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AEHL"
+    },
+    "AEHR": {
+      "price": 31.02,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-04T00:00:00.000Z",
+      "symbol": "AEHR"
+    },
+    "INTC": {
+      "price": 36.83,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "INTC"
+    },
+    "QCOM": {
+      "price": 169.18,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "QCOM"
+    },
+    "AVGO": {
+      "price": 338.37,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "AVGO"
+    },
+    "AMAT": {
+      "price": 217.53,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "AMAT"
+    },
+    "PYPL": {
+      "price": 69.25,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PYPL"
+    },
+    "CSCO": {
+      "price": 67.92,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CSCO"
+    },
+    "INTU": {
+      "price": 679.94,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "INTU"
+    },
+    "COST": {
+      "price": 915.38,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "COST"
+    },
+    "PDD": {
+      "price": 134.25,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PDD"
+    },
+    "BKNG": {
+      "price": 5418.05,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "BKNG"
+    },
+    "EBAY": {
+      "price": 92.17,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "EBAY"
+    },
+    "SBUX": {
+      "price": 86.42,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "SBUX"
+    },
+    "LRCX": {
+      "price": 145.81,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "LRCX"
+    },
+    "CHKP": {
+      "price": 201.57,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CHKP"
+    },
+    "SIRI": {
+      "price": 23.275,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "SIRI"
+    },
+    "MU": {
+      "price": 187.83,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MU"
+    },
+    "BILI": {
+      "price": 28.51,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "BILI"
+    },
+    "BIDU": {
+      "price": 142.0,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "BIDU"
+    },
+    "MRNA": {
+      "price": 28.49,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MRNA"
+    },
+    "RIVN": {
+      "price": 13.65,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "RIVN"
+    },
+    "ADI": {
+      "price": 241.99,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ADI"
+    },
+    "KLAC": {
+      "price": 1101.55,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "KLAC"
+    },
+    "TXN": {
+      "price": 180.32,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "TXN"
+    },
+    "SNPS": {
+      "price": 469.17,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "SNPS"
+    },
+    "ORLY": {
+      "price": 104.79,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ORLY"
+    },
+    "WDAY": {
+      "price": 236.48,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "WDAY"
+    },
+    "DOCU": {
+      "price": 69.73,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "DOCU"
+    },
+    "ZM": {
+      "price": 80.96,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ZM"
+    },
+    "ROKU": {
+      "price": 103.85,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ROKU"
+    },
+    "LYFT": {
+      "price": 21.99,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "LYFT"
+    },
+    "MARA": {
+      "price": 18.82,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MARA"
+    },
+    "CRWD": {
+      "price": 489.88,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CRWD"
+    },
+    "PTON": {
+      "price": 8.58,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PTON"
+    },
+    "ZS": {
+      "price": 305.41,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ZS"
+    },
+    "PANW": {
+      "price": 207.19,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PANW"
+    },
+    "HOOD": {
+      "price": 148.67,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "HOOD"
+    },
+    "LULU": {
+      "price": 175.59,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "LULU"
+    },
+    "MCHP": {
+      "price": 66.54,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MCHP"
+    },
+    "NXPI": {
+      "price": 228.89,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "NXPI"
+    },
+    "FTNT": {
+      "price": 85.79,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "FTNT"
+    },
+    "CDNS": {
+      "price": 347.27,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CDNS"
+    },
+    "IDXX": {
+      "price": 631.19,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "IDXX"
+    },
+    "MRVL": {
+      "price": 86.22,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MRVL"
+    },
+    "ROST": {
+      "price": 152.64,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ROST"
+    },
+    "MNST": {
+      "price": 67.17,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MNST"
+    },
+    "PCAR": {
+      "price": 98.09,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PCAR"
+    },
+    "MELI": {
+      "price": 2172.75,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MELI"
+    },
+    "VRSK": {
+      "price": 249.04,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "VRSK"
+    },
+    "PAYX": {
+      "price": 124.61,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PAYX"
+    },
+    "GILD": {
+      "price": 112.69,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "GILD"
+    },
+    "BIIB": {
+      "price": 159.88,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "BIIB"
+    },
+
+    "MAR": {
+      "price": 267.57,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MAR"
+    },
+    "UAL": {
+      "price": 95.33,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "UAL"
+    },
+    "WDC": {
+      "price": 131.31,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "WDC"
+    },
+    "DLTR": {
+      "price": 89.98,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "DLTR"
+    },
+    "NDAQ": {
+      "price": 87.61,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "NDAQ"
+    },
+    "CMCSA": {
+      "price": 30.9,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CMCSA"
+    },
+    "CSX": {
+      "price": 36.01,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CSX"
+    },
+    "CTAS": {
+      "price": 202.61,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CTAS"
+    },
+    "ILMN": {
+      "price": 102.12,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ILMN"
+    },
+    "CTSH": {
+      "price": 67.66,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CTSH"
+    },
+    "KDP": {
+      "price": 25.84,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "KDP"
+    },
+    "REGN": {
+      "price": 600.0,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "REGN"
+    },
+    "EA": {
+      "price": 200.69,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "EA"
+    },
+    "AAPL": {
+      "price": 258.02,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "AAPL"
+    },
+    "META": {
+      "price": 710.56,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "META"
+    },
+    "AMZN": {
+      "price": 219.51,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "AMZN"
+    },
+    "GOOG": {
+      "price": 246.45,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "GOOG"
+    },
+    "GOOGL": {
+      "price": 245.35,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "GOOGL"
+    },
+    "MSFT": {
+      "price": 517.35,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MSFT"
+    },
+    "NVDA": {
+      "price": 187.62,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "NVDA"
+    },
+    "TSLA": {
+      "price": 429.83,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "TSLA"
+    },
+    "NFLX": {
+      "price": 1153.32,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "NFLX"
+    },
+    "AMD": {
+      "price": 164.67,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "AMD"
+    },
+    "PEP": {
+      "price": 141.98,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PEP"
+    },
+    "QQQ": {
+      "price": 603.18,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "QQQ"
+    },
+    "JD": {
+      "price": 35.4,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "JD"
+    },
+    "COIN": {
+      "price": 380.02,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "COIN"
+    },
+    "PLTR": {
+      "price": 173.07,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "PLTR"
+    },
+    "MSTR": {
+      "price": 351.63,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MSTR"
+    },
+    "DASH": {
+      "price": 271.22,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "DASH"
+    },
+    "EXPE": {
+      "price": 219.23,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "EXPE"
+    },
+    "MPWR": {
+      "price": 918.83,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "MPWR"
+    },
+    "ON": {
+      "price": 49.27,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "ON"
+    },
+    "CPRT": {
+      "price": 45.11,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "CPRT"
+    },
+    "SWKS": {
+      "price": 77.1,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "SWKS"
+    },
+    "VRSN": {
+      "price": 272.98,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "VRSN"
+    },
+    "XEL": {
+      "price": 80.26,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "XEL"
+    },
+    "BYND": {
+      "price": 2.57,
+      "source": "Nasdaq",
+      "timestamp": "2025-10-05T00:00:00.000Z",
+      "symbol": "BYND"
+    }
+  }
+}
