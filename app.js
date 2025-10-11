@@ -727,6 +727,31 @@ class InvestmentPortfolio {
             const resetBrokerTheme = document.getElementById('reset-broker-theme-checkbox').checked;
             this.resetPortfolio(resetBrokerTheme);
         });
+
+        // Export data button
+        document.getElementById('export-data-btn').addEventListener('click', () => {
+            this.exportData();
+        });
+
+        // Import data button
+        document.getElementById('import-data-btn').addEventListener('click', () => {
+            this.showImportConfirmation();
+        });
+
+        // Import file selection
+        document.getElementById('select-file-btn').addEventListener('click', () => {
+            document.getElementById('import-file-input').click();
+        });
+
+        // Import file input change
+        document.getElementById('import-file-input').addEventListener('change', (e) => {
+            this.handleFileSelection(e);
+        });
+
+        // Import confirmation
+        document.getElementById('confirm-import-btn').addEventListener('click', () => {
+            this.importData();
+        });
     }
 
     // Switch between views
@@ -1641,6 +1666,131 @@ class InvestmentPortfolio {
             console.error('Error resetting portfolio:', error);
             this.showNotification('Error resetting portfolio. Please try again.', 'error');
         }
+    }
+
+    // Export all localStorage data
+    exportData() {
+        try {
+            const exportData = {};
+            const localStorageKeys = Object.keys(localStorage);
+            
+            // Export all keys that start with 'fake-portfolio-' for future-proofing
+            localStorageKeys.forEach(key => {
+                if (key.startsWith('fake-portfolio-')) {
+                    exportData[key] = localStorage.getItem(key);
+                }
+            });
+            
+            // Create export metadata
+            const exportObject = {
+                exportedAt: new Date().toISOString(),
+                version: '1.0',
+                subdomain: window.location.hostname,
+                data: exportData
+            };
+            
+            // Create and download file
+            const dataStr = JSON.stringify(exportObject, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = `portfolio-backup-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            this.showNotification('Portfolio data exported successfully!', 'success');
+            
+        } catch (error) {
+            console.error('Error exporting data:', error);
+            this.showNotification('Error exporting data. Please try again.', 'error');
+        }
+    }
+
+    // Show import confirmation modal
+    showImportConfirmation() {
+        document.getElementById('import-confirmation-modal').style.display = 'flex';
+        // Reset file selection
+        document.getElementById('import-file-input').value = '';
+        document.getElementById('selected-file-name').textContent = '';
+        document.getElementById('confirm-import-btn').disabled = true;
+    }
+
+    // Handle file selection for import
+    handleFileSelection(event) {
+        const file = event.target.files[0];
+        const fileNameSpan = document.getElementById('selected-file-name');
+        const confirmBtn = document.getElementById('confirm-import-btn');
+        
+        if (file) {
+            if (file.type === 'application/json' || file.name.endsWith('.json')) {
+                fileNameSpan.textContent = file.name;
+                confirmBtn.disabled = false;
+            } else {
+                fileNameSpan.textContent = '';
+                confirmBtn.disabled = true;
+                this.showNotification('Please select a valid JSON file.', 'error');
+            }
+        } else {
+            fileNameSpan.textContent = '';
+            confirmBtn.disabled = true;
+        }
+    }
+
+    // Import data from file
+    importData() {
+        const fileInput = document.getElementById('import-file-input');
+        const file = fileInput.files[0];
+        
+        if (!file) {
+            this.showNotification('Please select a file to import.', 'error');
+            return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            try {
+                const importObject = JSON.parse(e.target.result);
+                
+                // Validate import data structure
+                if (!importObject.data || typeof importObject.data !== 'object') {
+                    throw new Error('Invalid import file format');
+                }
+                
+                // Clear existing localStorage keys that start with 'fake-portfolio-'
+                const existingKeys = Object.keys(localStorage);
+                existingKeys.forEach(key => {
+                    if (key.startsWith('fake-portfolio-')) {
+                        localStorage.removeItem(key);
+                    }
+                });
+                
+                // Import all data
+                Object.entries(importObject.data).forEach(([key, value]) => {
+                    if (key.startsWith('fake-portfolio-')) {
+                        localStorage.setItem(key, value);
+                    }
+                });
+                
+                // Close the modal
+                this.closeModal('import-confirmation-modal');
+                
+                // Show notification and reload to apply changes
+                this.showNotification('Data imported successfully! Reloading page...', 'success');
+                
+                // Reload the page after a short delay to apply all imported settings
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1500);
+                
+            } catch (error) {
+                console.error('Error importing data:', error);
+                this.showNotification('Error importing data. Please check the file format.', 'error');
+            }
+        };
+        
+        reader.readAsText(file);
     }
 
     populateAssetSelect() {

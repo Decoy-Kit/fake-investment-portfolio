@@ -1064,3 +1064,27 @@ body.theme-financehub .portfolio-summary {
         opacity: 1;
     }
 }
+
+/* Import/Export Functionality */
+.file-input-container {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selected-file-name {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.selected-file-name:empty::before {
+    content: "No file selected";
+}
+
+.selected-file-name:not(:empty)::before {
+    content: "Selected: ";
+    font-weight: 500;
+    color: var(--text-primary);
+}
