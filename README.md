@@ -6,6 +6,38 @@ A web-based tool to create realistic-looking fake investment portfolios with scr
 
 The application is automatically deployed to GitHub Pages at: `https://gekkedev.github.io/fake-investment-portfolio/`
 
+## 📸 Preview
+
+### Getting Started
+Start with an empty portfolio ready for your first assets. The clean interface shows your available balance and makes it easy to begin adding holdings.
+
+![Empty Portfolio](screenshots/01-empty-portfolio.png)
+
+### Portfolio Overview
+Track your fake investments with a clean, professional interface showing total portfolio value, available balance, and individual holdings.
+
+![Portfolio with Holdings](screenshots/02-portfolio-with-holdings.png)
+
+### Transaction History
+View and manage all your fake transactions with detailed information about each buy/sell operation.
+
+![Transaction History](screenshots/03-transactions-view.png)
+
+### Analytics Dashboard
+Monitor portfolio performance with statistics and visual charts showing your investment trends.
+
+![Analytics View](screenshots/04-analytics-view.png)
+
+### Screenshot Mode
+Generate clean, professional screenshots by hiding all editing controls with a single click.
+
+![Screenshot Mode](screenshots/06-screenshot-mode-clean.png)
+
+### Feature-Rich Menu
+Access all features including currency switching, screenshot mode, data import/export, and portfolio reset.
+
+![Menu Features](screenshots/05-menu-with-features.png)
+
 ## ✨ Features
 
 ### Core Functionality
