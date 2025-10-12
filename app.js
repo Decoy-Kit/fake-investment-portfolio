@@ -701,6 +701,29 @@ class InvestmentPortfolio {
             this.showBalanceEditor();
         });
 
+        // Hamburger menu toggle
+        const hamburgerMenuBtn = document.getElementById('hamburger-menu-btn');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        
+        hamburgerMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hamburgerMenu.classList.toggle('active');
+        });
+
+        // Close hamburger menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.hamburger-menu') && !e.target.closest('.hamburger-menu-btn')) {
+                hamburgerMenu.classList.remove('active');
+            }
+        });
+
+        // Close hamburger menu when clicking on menu items (except currency selector)
+        hamburgerMenu.addEventListener('click', (e) => {
+            if (e.target.closest('.menu-btn')) {
+                hamburgerMenu.classList.remove('active');
+            }
+        });
+
         // Close modal on background click
         document.querySelectorAll('.modal').forEach(modal => {
             modal.addEventListener('click', (e) => {

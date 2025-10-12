@@ -82,8 +82,66 @@ body {
 
 .header-controls {
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.hamburger-menu-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    transition: all 0.2s;
+}
+
+.hamburger-menu-btn:hover {
+    color: var(--primary-color);
+    background: var(--background-color);
+}
+
+/* Hamburger Menu Dropdown */
+.hamburger-menu {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    min-width: 250px;
+    display: none;
+}
+
+.hamburger-menu.active {
+    display: block;
+}
+
+.hamburger-menu-content {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0.25rem;
+}
+
+.menu-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.menu-btn {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 #currency-selector {
@@ -94,6 +152,7 @@ body {
     border-radius: var(--border-radius);
     font-size: 0.875rem;
     cursor: pointer;
+    width: 100%;
 }
 
 #currency-selector:focus {
