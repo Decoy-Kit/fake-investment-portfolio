@@ -93,13 +93,16 @@ describe('Currency Conversion Bug Tests', () => {
     const jsPath = path.join(projectRoot, 'app.js');
     const jsContent = fs.readFileSync(jsPath, 'utf-8');
 
-    // Make sure the fix is in place
-    assert.ok(jsContent.includes('price: priceInUSD'), 'Transaction should use priceInUSD for price');
-    assert.ok(jsContent.includes('total: totalCostUSD'), 'Transaction should use totalCostUSD for total');
+    // Make sure properly defined variables are used (with or without discount)
+    // The new discount feature uses discountedPrice but still properly converts USD
+    assert.ok(jsContent.includes('price: discountedPrice') || jsContent.includes('price: priceInUSD'), 
+      'Transaction should use properly defined price variable');
+    assert.ok(jsContent.includes('total: totalCostUSD') || jsContent.includes('total: quantity * discountedPrice'), 
+      'Transaction should use properly defined total variable');
     
     // Make sure the old buggy code is not there
     assert.ok(!jsContent.includes('price,\n'), 'Should not have undefined price variable');
-    assert.ok(!jsContent.includes('total: totalCost\n') || jsContent.includes('total: totalCostUSD'), 
+    assert.ok(!jsContent.includes('total: totalCost\n') || jsContent.includes('total: totalCostUSD') || jsContent.includes('total: quantity * discountedPrice'), 
       'Should not have undefined totalCost variable');
   });
 
@@ -109,15 +112,17 @@ describe('Currency Conversion Bug Tests', () => {
     const jsPath = path.join(projectRoot, 'app.js');
     const jsContent = fs.readFileSync(jsPath, 'utf-8');
 
-    // Check for the transaction creation code
-    const transactionCreationRegex = /const transaction = \{[\s\S]*?price: priceInUSD[\s\S]*?total: totalCostUSD[\s\S]*?\}/;
+    // Check for the transaction creation code (supporting both old and new discount feature)
+    const transactionCreationRegex = /const transaction = \{[\s\S]*?price: (priceInUSD|discountedPrice)[\s\S]*?total: (totalCostUSD|quantity \* discountedPrice)[\s\S]*?\}/;
     const match = jsContent.match(transactionCreationRegex);
     
     assert.ok(match, 'Should find properly defined transaction creation code');
     
-    // Verify that the correct variables are used
-    assert.ok(match[0].includes('price: priceInUSD'), 'Transaction creation should use "priceInUSD" variable');
-    assert.ok(match[0].includes('total: totalCostUSD'), 'Transaction creation should use "totalCostUSD" variable');
+    // Verify that the correct variables are used (either priceInUSD or discountedPrice)
+    assert.ok(match[0].includes('price: priceInUSD') || match[0].includes('price: discountedPrice'), 
+      'Transaction creation should use properly defined price variable');
+    assert.ok(match[0].includes('total: totalCostUSD') || match[0].includes('total: quantity * discountedPrice'), 
+      'Transaction creation should use properly defined total variable');
     
     console.log('Found corrected transaction creation code:');
     console.log(match[0]);

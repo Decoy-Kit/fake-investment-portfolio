@@ -138,6 +138,38 @@ body {
     color: var(--text-secondary);
 }
 
+.menu-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.25rem 0;
+}
+
+.menu-checkbox-label input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.menu-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.menu-info-box i {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
 .menu-btn {
     width: 100%;
     justify-content: flex-start;
@@ -247,6 +279,30 @@ body {
 }
 
 /* Holdings */
+.holdings-search-container {
+    margin-bottom: 1rem;
+}
+
+.holdings-search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--surface-color);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.holdings-search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.holdings-search-input::placeholder {
+    color: var(--text-secondary);
+}
+
 .holdings-list {
     display: grid;
     gap: 1rem;
@@ -367,6 +423,20 @@ body {
 .transaction-value {
     font-weight: 600;
     text-align: right;
+}
+
+.transaction-profit-loss {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.transaction-profit-loss.positive {
+    color: var(--success-color);
+}
+
+.transaction-profit-loss.negative {
+    color: var(--danger-color);
 }
 
 .transaction-actions {
@@ -539,6 +609,24 @@ body {
     padding: 0 1.5rem;
 }
 
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field-third {
+    flex: 0 0 calc(33.333% - 0.667rem);
+}
+
+.form-field-two-thirds {
+    flex: 0 0 calc(66.667% - 0.333rem);
+}
+
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
@@ -560,6 +648,57 @@ body {
 .form-group select:focus {
     outline: none;
     border-color: var(--primary-color);
+}
+
+/* Transaction Preview */
+.transaction-preview {
+    margin: 1rem 1.5rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+}
+
+.transaction-preview.hidden {
+    display: none;
+}
+
+.transaction-preview-total {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.transaction-preview-formula {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-left: 0.5rem;
+}
+
+.transaction-preview-profit {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.transaction-preview-profit.positive {
+    color: var(--success-color);
+}
+
+.transaction-preview-profit.negative {
+    color: var(--danger-color);
+}
+
+.transaction-preview-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.transaction-preview-details {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
 }
 
 /* Price Input Container */
@@ -801,6 +940,12 @@ body.screenshot-mode .holding-actions button:not(.edit-only) {
     .header-content {
         flex-direction: column;
         text-align: center;
+    }
+
+    .institutional-badge {
+        top: unset !important;
+        bottom: 18px;
+        right: 14px !important;
     }
 
     .analytics-grid {
@@ -1146,4 +1291,279 @@ body.theme-financehub .portfolio-summary {
     content: "Selected: ";
     font-weight: 500;
     color: var(--text-primary);
+}
+
+/* Institutional Account Badge */
+.institutional-badge {
+    position: absolute;
+    top: 26px;
+    right: 70px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(255, 215, 0, 0.5), 0 2px 4px -1px rgba(255, 215, 0, 0.3);
+    z-index: 100;
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+.institutional-badge i {
+    font-size: 1rem;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        box-shadow: 0 4px 6px -1px rgba(255, 215, 0, 0.5), 0 2px 4px -1px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 12px -1px rgba(255, 215, 0, 0.8), 0 2px 8px -1px rgba(255, 215, 0, 0.6);
+    }
+}
+
+/* Make app-header position relative for badge positioning */
+.app-header {
+    position: relative;
+}
+
+/* Transaction Discount Display */
+.transaction-discount {
+    display: inline-block;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Dark Pool Badge */
+.dark-pool-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Form field adjustments for three columns */
+.form-field-third {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-row .form-field-third:not(:last-child) {
+    margin-right: 0.5rem;
+}
+/* Intro Modal Styles */
+.intro-modal .modal-content {
+    max-width: 700px;
+    max-height: 85vh;
+}
+
+.intro-modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    min-height: 400px;
+    position: relative;
+}
+
+.intro-step {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.intro-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro-step-icon {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.intro-step-icon i {
+    font-size: 3rem;
+    color: var(--primary-color, #007bff);
+}
+
+.intro-step h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color, #333);
+    text-align: center;
+}
+
+.intro-step p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-secondary, #555);
+}
+
+.intro-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.intro-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: var(--background-light, #f8f9fa);
+    border-left: 3px solid var(--primary-color, #007bff);
+    border-radius: 4px;
+    line-height: 1.6;
+}
+
+.intro-warning-box {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.intro-warning-box p {
+    margin-bottom: 0.75rem;
+}
+
+.intro-warning-box p:last-child {
+    margin-bottom: 0;
+}
+
+.intro-critical-warning {
+    font-weight: bold;
+    color: #d63384;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    background: #ffe5f0;
+    border-radius: 4px;
+}
+
+.intro-step-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #ddd);
+}
+
+.step-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--border-color, #ddd);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.step-dot.active {
+    background: var(--primary-color, #007bff);
+    transform: scale(1.2);
+}
+
+.intro-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color, #ddd);
+    background: var(--background-light, #f8f9fa);
+}
+
+.intro-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.intro-checkbox label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-secondary, #555);
+}
+
+.intro-checkbox input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.intro-buttons .btn {
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive adjustments for intro modal */
+@media (max-width: 768px) {
+    .intro-modal .modal-content {
+        max-width: 95%;
+        margin: 1rem;
+    }
+    
+    .intro-modal-body {
+        min-height: 300px;
+        padding: 1rem;
+    }
+    
+    .intro-step h4 {
+        font-size: 1.25rem;
+    }
+    
+    .intro-step-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .intro-modal-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .intro-checkbox {
+        justify-content: center;
+    }
+    
+    .intro-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
